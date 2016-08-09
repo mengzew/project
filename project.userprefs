@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="project/project.csproj">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="project/AppDelegate.cs" Line="47" Column="3" />
+      <File FileName="project/ViewController.cs" Line="17" Column="81" />
+      <File FileName="project/Main.cs" Line="12" Column="1" />
+      <File FileName="project/Sound_Manager/sound_manager.cs" Line="128" Column="3" />
+      <File FileName="project/ViewController.designer.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.project PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1FE0410F-05C1-48E6-A4CD-C147178613AF" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
