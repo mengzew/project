@@ -117,11 +117,25 @@
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Sound_Manager\sound_manager.cs" />
+    <Compile Include="TableView.cs" />
+    <Compile Include="TableView.designer.cs">
+      <DependentUpon>TableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableSource.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\go_1.png" />
     <BundleResource Include="Resources\background.png" />
-    <BundleResource Include="Resources\login.jpg" />
+    <BundleResource Include="Resources\heart.png" />
+    <BundleResource Include="Resources\cat.png" />
+    <BundleResource Include="Resources\login.png" />
+    <BundleResource Include="Resources\back.png" />
+    <BundleResource Include="Resources\save.png" />
+    <BundleResource Include="Resources\images.png" />
+    <BundleResource Include="Resources\weather.png" />
+    <BundleResource Include="Resources\party.png" />
+    <BundleResource Include="Resources\assignment.png" />
+    <BundleResource Include="Resources\tools.png" />
+    <BundleResource Include="Resources\uni_life.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

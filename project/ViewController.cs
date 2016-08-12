@@ -1,5 +1,8 @@
 ﻿using System;
 using UIKit;
+using AudioToolbox;
+using AVFoundation;
+using Foundation;
 
 namespace project
 {
@@ -15,8 +18,34 @@ namespace project
 		{
 			base.ViewDidLoad();
 			// Perform any additional setup after loading the view, typically from a nib.
-		}
+			this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("background.png"));
 
+			// enable the following lines to make functions work
+			/*
+			alert.TouchUpInside += ((object sender, EventArgs e) =>
+			{
+				var textInputAlertController = UIAlertController.Create("Require user password", "please enter ", UIAlertControllerStyle.Alert);
+				textInputAlertController.AddTextField(textField =>
+				{
+				});
+				var cancelAction = UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, alertAction => Console.WriteLine("Cancel was Pressed"));
+				var okayAction = UIAlertAction.Create("Okay", UIAlertActionStyle.Default, alertAction => Console.WriteLine("The user entered '{0}'", textInputAlertController.TextFields[0].Text));
+
+				textInputAlertController.AddAction(cancelAction);
+				textInputAlertController.AddAction(okayAction);
+				PresentViewController(textInputAlertController, true, null);
+			}); */
+
+			imageController.ValueChanged += (sender, e) =>
+			{
+				var selectedSegmentId = (sender as UISegmentedControl).SelectedSegment;
+				if (selectedSegmentId == 1)
+				{
+					changedImage.Image = UIImage.FromBundle("uni_life.jpg");
+				}
+			};
+
+		}
 
 		public override void DidReceiveMemoryWarning()
 		{
@@ -24,15 +53,10 @@ namespace project
 			// Release any cached data, images, etc that aren't in use.
 		}
 
-		public override void ViewWillAppear(bool animated)
+		public static AppDelegate App
 		{
-			this.BeginInvokeOnMainThread(delegate
-			{
-				this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("background.png"));
-			});
-			base.ViewWillAppear(animated);
+			get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
 		}
-
 	}
 }
 

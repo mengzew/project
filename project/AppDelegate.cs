@@ -17,7 +17,7 @@ namespace project
 			get;
 			set;
 		}
-		public sound_manager S_M { get; set; } = new sound_manager();
+		public sound_manager AudioManager { get; set; } = new sound_manager();
 		#endregion
 
 		#region Override Methods
@@ -41,16 +41,16 @@ namespace project
 		{
 			// Use this method to release shared resources, save user data, invalidate timers and store the application state.
 			// If your application supports background exection this method is called instead of WillTerminate when the user quits.
-			S_M.SuspendBackgroundMusic();
-			S_M.DeactivateAudioSession();
+			AudioManager.SuspendBackgroundMusic();
+			AudioManager.DeactivateAudioSession();
 		}
 
 		public override void WillEnterForeground(UIApplication application)
 		{
 			// Called as part of the transiton from background to active state.
 			// Here you can undo many of the changes made on entering the background.
-			S_M.ReactivateAudioSession();
-			S_M.RestartBackgroundMusic();
+			AudioManager.ReactivateAudioSession();
+			AudioManager.RestartBackgroundMusic();
 		}
 
 		public override void OnActivated(UIApplication application)
@@ -62,8 +62,8 @@ namespace project
 		public override void WillTerminate(UIApplication application)
 		{
 			// Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
-			S_M.StopBackgroundMusic();
-			S_M.DeactivateAudioSession();
+			AudioManager.StopBackgroundMusic();
+			AudioManager.DeactivateAudioSession();
 		}
 		#endregion
 	}
